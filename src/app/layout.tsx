@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Bebas_Neue } from "next/font/google";
+import { Geist, Bebas_Neue, Barlow } from "next/font/google";
 import "./globals.css";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
@@ -13,6 +13,12 @@ const geist = Geist({
 const bebasNeue = Bebas_Neue({
   variable: "--font-bebas-neue",
   weight: "400",
+  subsets: ["latin"],
+});
+
+const barlow = Barlow({
+  variable: "--font-barlow",
+  weight: ["400", "500", "600", "700"],
   subsets: ["latin"],
 });
 
@@ -30,7 +36,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${geist.variable} ${bebasNeue.variable} h-full antialiased`}>
+    <html lang="en" className={`${geist.variable} ${bebasNeue.variable} ${barlow.variable} h-full antialiased`}>
       <body className="min-h-full flex flex-col bg-white text-slate-900">
         <Nav />
         <main className="flex-1">{children}</main>
