@@ -63,13 +63,13 @@ export default function Nav() {
 
       {/* Mobile dropdown */}
       {menuOpen && (
-        <div className="border-t border-slate-700 bg-slate-900 px-6 pb-4 md:hidden">
-          <ul className="flex flex-col gap-4 pt-4">
+        <div className="border-t border-slate-700 bg-slate-900 px-6 pb-6 md:hidden">
+          <ul className="flex flex-col pt-2">
             {NAV_LINKS.map((link) => (
               <li key={link.href}>
                 <Link
                   href={link.href}
-                  className="block text-sm font-medium text-slate-300 hover:text-blue-400"
+                  className="block py-4 text-lg font-medium text-slate-300 hover:text-blue-400"
                   onClick={() => setMenuOpen(false)}
                 >
                   {link.label}
