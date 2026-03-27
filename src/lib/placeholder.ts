@@ -17,7 +17,7 @@ export const COACH = {
 export const HERO = {
   headline: "Your Game. Elevated.", // TODO: confirm with client
   subheadline:
-    "Personalized basketball training and elite summer camps designed to take your game to the next level.", // TODO: confirm
+    "Personalized basketball training designed to take your game to the next level.", // TODO: confirm
   backgroundUrl: "https://picsum.photos/seed/basketball/1600/900", // TODO: real action photo
 };
 
@@ -40,11 +40,11 @@ export const SERVICES = [
   },
   {
     id: "camps",
-    title: "Summer Camps",
+    title: "Training Camps",
     description:
-      "Multi-day camps for youth players ages 8–18. Full-day and half-day formats available throughout the summer.", // TODO: real dates
+      "Multi-day camps for youth players ages 8–18. Full-day and half-day formats available throughout the year.", // TODO: real dates
     icon: "🏕️",
-    href: "/camps",
+    href: "/training",
   },
 ];
 
@@ -82,14 +82,15 @@ export const CAMPS = [
 ];
 
 export const CONTACT = {
-  email: "TODO@example.com", // TODO: real email address from client
-  phone: "(555) 123-4567", // TODO: real phone number from client
-  location: "City, State", // TODO: real location
+  email: "blountball1@gmail.com", // TODO: real email address from client
+  phone: "(610) 737-8696", // TODO: real phone number from client
+  location: "Lehigh Valley, PA",
 };
 
 export const NAV_LINKS = [
   { label: "Home", href: "/" },
   { label: "About", href: "/#about" },
   { label: "Programs", href: "/training" },
+  { label: "Media", href: "/media" },
   { label: "Contact", href: "/contact" },
 ];

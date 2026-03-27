@@ -26,11 +26,20 @@ export default function HomePage() {
           <p className="mb-3 text-sm font-semibold uppercase tracking-widest text-pink-400">
             What We Offer
           </p>
+          <h2 className="mb-8 text-4xl font-extrabold text-white leading-tight">
+            Programs Built to<br />Elevate Your Game
+          </h2>
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2">
             {SERVICES.map((service) => (
               <ServiceCard key={service.id} {...service} compact />
             ))}
           </div>
+          <Link
+            href="/training"
+            className="mt-8 self-start text-sm font-semibold text-blue-400 hover:text-blue-300 transition-colors"
+          >
+            Explore our programs &rarr;
+          </Link>
         </div>
       </section>
 
@@ -74,6 +83,10 @@ export default function HomePage() {
                   youth by teaching the fundamentals of the game for many years.
                 </p>
               </div>
+
+              <p className="mt-6 leading-relaxed text-slate-300">
+                The Next Step Basketball Program is a great resource for all basketball programs from youth through college teams preparing for the upcoming season. TNS holds its own sessions on the weekends and looks to assist in your team&rsquo;s skill development as well as basketball IQ.
+              </p>
 
               <Link
                 href="/contact"

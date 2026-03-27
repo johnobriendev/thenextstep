@@ -15,20 +15,39 @@ const SLIDES = [
 const SLIDE_DURATION_MS = 5000;
 
 export default function HeroSection() {
+  const [loaded, setLoaded] = useState<boolean[]>(() => SLIDES.map(() => false));
   const [current, setCurrent] = useState(0);
 
+  // Preload all images; mark each as loaded (or skip if broken)
   useEffect(() => {
+    SLIDES.forEach((src, i) => {
+      const img = new window.Image();
+      img.onload = () =>
+        setLoaded((prev) => {
+          const next = [...prev];
+          next[i] = true;
+          return next;
+        });
+      img.onerror = () => {}; // leave false — slide stays hidden
+      img.src = src;
+    });
+  }, []);
+
+  const loadedSlides = SLIDES.filter((_, i) => loaded[i]);
+
+  useEffect(() => {
+    if (loadedSlides.length < 2) return;
     const id = setInterval(
-      () => setCurrent((c) => (c + 1) % SLIDES.length),
+      () => setCurrent((c) => (c + 1) % loadedSlides.length),
       SLIDE_DURATION_MS
     );
     return () => clearInterval(id);
-  }, []);
+  }, [loadedSlides.length]);
 
   return (
-    <section className="relative flex h-screen min-h-[600px] flex-col items-center justify-center overflow-hidden">
+    <section className="relative flex h-screen min-h-[600px] flex-col items-center justify-center overflow-hidden bg-slate-900">
       {/* Carousel background slides */}
-      {SLIDES.map((src, i) => (
+      {loadedSlides.map((src, i) => (
         <div
           key={src}
           className="absolute inset-0 bg-cover bg-center bg-no-repeat transition-opacity duration-1000"
@@ -52,7 +71,7 @@ export default function HeroSection() {
         <p className="mb-2 text-sm font-semibold uppercase tracking-widest text-pink-400">
           Welcome to
         </p>
-        <h1 className="max-w-2xl text-5xl font-extrabold leading-tight tracking-tight sm:text-6xl">
+        <h1 className="max-w-2xl text-6xl leading-tight tracking-wider sm:text-7xl" style={{ fontFamily: "var(--font-bebas-neue)" }}>
           The Next Step
           <span className="block text-blue-400">Basketball Training</span>
         </h1>
@@ -81,7 +100,7 @@ export default function HeroSection() {
 
       {/* Carousel dot indicators */}
       <div className="absolute bottom-8 flex gap-2">
-        {SLIDES.map((_, i) => (
+        {loadedSlides.map((_, i) => (
           <button
             key={i}
             onClick={() => setCurrent(i)}

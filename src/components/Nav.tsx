@@ -44,6 +44,11 @@ export default function Nav() {
           ))}
         </ul>
 
+        {/* TNS label — mobile only, between logo and hamburger */}
+        <span className="text-3xl tracking-wider text-white md:hidden" style={{ fontFamily: "var(--font-bebas-neue)" }}>
+          TNS
+        </span>
+
         {/* Mobile hamburger */}
         <button
           className="flex flex-col gap-1.5 md:hidden"
