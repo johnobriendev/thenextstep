@@ -3,7 +3,7 @@ import { SITE, NAV_LINKS, CONTACT } from "@/lib/placeholder";
 
 export default function Footer() {
   return (
-    <footer className="bg-slate-900 text-slate-400">
+    <footer className="bg-slate-950 text-slate-400">
       <div className="mx-auto max-w-6xl px-6 py-12">
         <div className="grid gap-8 sm:grid-cols-3">
           {/* Brand */}

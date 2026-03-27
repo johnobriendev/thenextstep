@@ -13,7 +13,7 @@ const PROGRAMS = [
     heading: "One-on-One Training",
     description:
       "Personalized sessions built around your specific needs — ball handling, shooting mechanics, footwork, and basketball IQ. Every rep has a purpose.",
-    photo: "/tns-1.jpg",
+    photo: "/tns-6.png",
     photoAlt: "Individual basketball training",
   },
   {
@@ -31,7 +31,7 @@ const PROGRAMS = [
     heading: "Training Camps",
     description:
       "Multi-day camps for youth players of all ages. High reps, real coaching, and a competitive environment designed to accelerate development in a short amount of time.",
-    photo: "/tns-3.jpg",
+    photo: "/tns-10.jpg",
     photoAlt: "Basketball training camp",
   },
 ];
@@ -39,44 +39,42 @@ const PROGRAMS = [
 export default function TrainingPage() {
   return (
     <>
-      {/* Program sections */}
-      {PROGRAMS.map((program, i) => {
-        const imageRight = i % 2 === 0;
-        return (
-          <section key={program.id} className="h-screen text-white">
-            <div className={`grid h-full lg:grid-cols-2 ${imageRight ? "" : "lg:[&>*:first-child]:order-last"}`}>
+      {PROGRAMS.map((program, i) => (
+        <section key={program.id} className={`py-20 text-white ${i % 2 === 0 ? "bg-slate-800" : "bg-slate-900"}`}>
+          <div className={`mx-auto flex max-w-6xl flex-col items-center gap-12 px-6 lg:flex-row ${i % 2 !== 0 ? "lg:flex-row-reverse" : ""}`}>
 
-              {/* Text */}
-              <div className="flex flex-col justify-center bg-slate-800 px-8 py-16 lg:px-16">
-                <p className="mb-3 text-xs font-semibold uppercase tracking-widest text-pink-400">
-                  {program.label}
-                </p>
-                <h2 className="mb-6 text-4xl font-extrabold leading-tight">
-                  {program.heading}
-                </h2>
-                <p className="text-lg leading-relaxed text-slate-400">
-                  {program.description}
-                </p>
-                <Link
-                  href="/contact"
-                  className="mt-8 self-start rounded-full bg-blue-600 px-7 py-3 text-sm font-semibold text-white transition-colors hover:bg-blue-500"
-                >
-                  Get in Touch
-                </Link>
-              </div>
+            {/* Text */}
+            <div className="flex-1">
+              <p className="mb-3 text-xs font-semibold uppercase tracking-widest text-pink-400">
+                {program.label}
+              </p>
+              <h2 className="mb-6 text-4xl font-extrabold leading-tight">
+                {program.heading}
+              </h2>
+              <p className="text-lg leading-relaxed text-slate-400">
+                {program.description}
+              </p>
+              <Link
+                href="/contact"
+                className="mt-8 inline-block rounded-full bg-blue-600 px-7 py-3 text-sm font-semibold text-white transition-colors hover:bg-blue-500"
+              >
+                Get in Touch
+              </Link>
+            </div>
 
-              {/* Photo */}
+            {/* Photo */}
+            <div className="w-full lg:w-[480px] shrink-0">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src={program.photo}
                 alt={program.photoAlt}
-                className="h-full w-full object-cover"
+                className="w-full h-auto rounded-2xl"
               />
-
             </div>
-          </section>
-        );
-      })}
+
+          </div>
+        </section>
+      ))}
     </>
   );
 }

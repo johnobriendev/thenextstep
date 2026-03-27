@@ -46,21 +46,30 @@ export default function HomePage() {
       {/* 3 — About */}
       <section id="about" className="flex min-h-screen flex-col justify-center bg-slate-900 py-24 text-white">
         <div className="mx-auto w-full max-w-6xl px-6">
+
+          {/* Mobile-only heading — sits above the photo */}
+          <div className="mb-6 lg:hidden">
+            <p className="mb-2 text-sm font-semibold uppercase tracking-widest text-pink-400">
+              About the Coach
+            </p>
+            <h2 className="text-4xl font-extrabold">{COACH.name}</h2>
+          </div>
+
           <div className="grid items-center gap-12 lg:grid-cols-2">
-            <div className="overflow-hidden rounded-2xl">
+            <div className="overflow-hidden rounded-2xl mx-auto w-2/3 sm:w-1/2 lg:w-full">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src="/coach.jpg"
+                src="/coach-al.jpeg"
                 alt={COACH.name}
-                className="w-full object-cover"
+                className="w-full h-auto"
               />
             </div>
 
             <div>
-              <p className="mb-2 text-sm font-semibold uppercase tracking-widest text-pink-400">
+              <p className="mb-2 text-sm font-semibold uppercase tracking-widest text-pink-400 hidden lg:block">
                 About the Coach
               </p>
-              <h2 className="mb-6 text-4xl font-extrabold">{COACH.name}</h2>
+              <h2 className="mb-6 text-4xl font-extrabold hidden lg:block">{COACH.name}</h2>
 
               <div className="space-y-4 leading-relaxed text-slate-300">
                 <p>
@@ -99,8 +108,33 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 4 — Contact CTA */}
-      <section className="flex min-h-screen flex-col items-center justify-center bg-slate-800 py-24 text-center text-white">
+      {/* 4 — Testimonials */}
+      <section className="flex min-h-screen flex-col justify-center bg-slate-800 py-24 text-white">
+        <div className="mx-auto max-w-6xl px-6">
+          <p className="mb-3 text-sm font-semibold uppercase tracking-widest text-pink-400">
+            Testimonials
+          </p>
+          <h2 className="mb-16 text-4xl font-extrabold">What Our Families Say</h2>
+          <div className="grid gap-8 lg:grid-cols-2">
+
+            <div className="rounded-2xl bg-slate-900 p-8">
+              <p className="leading-relaxed text-slate-300">
+                Coach Al has played a huge role in my son&rsquo;s growth as a basketball player and as a young person. Through his patience, encouragement, and clear instruction, Xavier has gained confidence in his abilities and developed stronger fundamentals and game awareness. Coach Al creates a positive, motivating environment that allows kids to believe in themselves, work hard, and enjoy the game. We are incredibly grateful for the impact he&rsquo;s had on my son&rsquo;s confidence and love for basketball.
+              </p>
+            </div>
+
+            <div className="rounded-2xl bg-slate-900 p-8">
+              <p className="leading-relaxed text-slate-300">
+                Coach Al&rsquo;s approach has truly transformed my son&rsquo;s game. Through disciplined, fundamentals-based drills, Derek has become a more confident shooter, a stronger ball handler, and a more complete all-around player. The time, consistency, and attention to detail Coach Al brings to every session has made a lasting impact, not just on my son&rsquo;s skills, but on his work ethic and mindset as a player.
+              </p>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      {/* 5 — Contact CTA */}
+      <section className="flex min-h-screen flex-col items-center justify-center bg-slate-900 py-24 text-center text-white">
         <div className="mx-auto max-w-2xl px-6">
           <p className="mb-3 text-sm font-semibold uppercase tracking-widest text-pink-400">
             The Next Step

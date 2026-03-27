@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import MediaGallery from "@/components/MediaGallery";
 
 export const metadata: Metadata = {
   title: "Media",
@@ -7,15 +8,9 @@ export const metadata: Metadata = {
 
 export default function MediaPage() {
   return (
-    <section className="flex min-h-screen flex-col bg-slate-900 px-6 py-24 text-white">
-      <div className="mx-auto w-full max-w-6xl">
-        <p className="mb-3 text-sm font-semibold uppercase tracking-widest text-pink-400">
-          Gallery
-        </p>
-        <h1 className="mb-4 text-4xl font-extrabold leading-tight">Media</h1>
-        <p className="text-slate-400">
-          Photos and videos coming soon.
-        </p>
+    <section className="min-h-screen bg-slate-900 py-24 text-white">
+      <div className="mx-auto w-full max-w-6xl px-6">
+        <MediaGallery />
       </div>
     </section>
   );

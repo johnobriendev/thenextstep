@@ -4,12 +4,12 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import { HERO, SITE } from "@/lib/placeholder";
 
-// TODO: replace with real client photos (1920×1080px WebP, <300KB each)
-// Drop files in /public/images/ and update paths e.g. "/images/court.webp"
 const SLIDES = [
-  "https://images.unsplash.com/photo-1546519638405-a57897d37dc?auto=format&fit=crop&w=1920&q=80",
-  "https://images.unsplash.com/photo-1519861531473-9200262188bf?auto=format&fit=crop&w=1920&q=80",
-  "https://images.unsplash.com/photo-1574623452334-1e0ac2b3ccb4?auto=format&fit=crop&w=1920&q=80",
+  "/cover-1.jpg",
+  "/cover-2.jpg",
+  "/cover-3.png",
+  "/cover-4.jpg",
+  "/cover-5.png",
 ];
 
 const SLIDE_DURATION_MS = 5000;
