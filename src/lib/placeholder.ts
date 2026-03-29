@@ -34,7 +34,7 @@ export const SERVICES = [
     id: "group",
     title: "Group Sessions",
     description:
-      "Small-group workouts (2–6 players) that combine skill development with competitive reps and team concepts.", // TODO: refine
+      "Small-group workouts that build fundamentals, sharpen skills, and grow basketball IQ in a structured team environment.", // TODO: refine
     icon: "👥",
     href: "/training",
   },
@@ -42,7 +42,7 @@ export const SERVICES = [
     id: "camps",
     title: "Training Camps",
     description:
-      "Multi-day camps for youth players ages 8–18. Full-day and half-day formats available throughout the year.", // TODO: real dates
+      "Intensive multi-day camps focused on skill development, fundamentals, and a love for the game.", // TODO: refine
     icon: "🏕️",
     href: "/training",
   },

@@ -12,13 +12,27 @@ export default function HomePage() {
       {/* 2 — What We Offer + Logo */}
       <section className="grid lg:grid-cols-2 lg:h-screen">
         {/* Logo side — top on mobile, right on desktop */}
-        <div className="order-first flex items-center justify-center bg-slate-900 py-12 px-6 lg:order-last lg:py-0">
+        <div className="order-first flex flex-col items-center justify-center gap-8 bg-slate-900 py-12 px-6 lg:order-last lg:py-0">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src="/TNS-logo.PNG"
             alt="The Next Step Basketball Training"
             className="w-64 sm:w-80 lg:w-[420px]"
           />
+          <div className="text-center max-w-sm">
+            <p className="text-2xl sm:text-3xl font-bold text-white leading-snug">
+              TNS holds group sessions every Sunday from 12 to 1.
+            </p>
+            <p className="mt-3 text-xl sm:text-2xl font-semibold text-slate-300">
+              Call, email, or text Coach for more info.
+            </p>
+            <Link
+              href="/contact"
+              className="mt-5 inline-block rounded-full bg-blue-600 px-8 py-3 text-base font-semibold text-white transition-colors hover:bg-blue-500"
+            >
+              Contact Coach &rarr;
+            </Link>
+          </div>
         </div>
 
         {/* What We Offer side — left on desktop */}

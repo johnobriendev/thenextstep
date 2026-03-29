@@ -12,7 +12,7 @@ const PROGRAMS = [
     label: "Individual Training",
     heading: "One-on-One Training",
     description:
-      "Personalized sessions built around your specific needs — ball handling, shooting mechanics, footwork, and basketball IQ. Every rep has a purpose.",
+      "Personalized sessions built around your specific needs — ball handling, shooting mechanics, footwork, and basketball IQ.",
     photo: "/tns-6.png",
     photoAlt: "Individual basketball training",
   },
@@ -21,7 +21,7 @@ const PROGRAMS = [
     label: "Group Sessions",
     heading: "Group Sessions",
     description:
-      "Small-group workouts that combine skill development with competitive reps and team concepts. Players push each other and grow together.",
+      "Small-group workouts that combine skill development with team concepts. Players push each other and grow together.",
     photo: "/tns-2.jpg",
     photoAlt: "Group basketball session",
   },
@@ -30,7 +30,7 @@ const PROGRAMS = [
     label: "Training Camps",
     heading: "Training Camps",
     description:
-      "Multi-day camps for youth players of all ages. High reps, real coaching, and a competitive environment designed to accelerate development in a short amount of time.",
+      "Multi-day camps for youth players of all ages. Real coaching and a competitive environment designed to accelerate development in a short amount of time.",
     photo: "/tns-10.jpg",
     photoAlt: "Basketball training camp",
   },
