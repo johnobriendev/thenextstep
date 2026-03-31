@@ -12,15 +12,17 @@ const PHOTOS = [
   "/cover-1.jpg",
   "/cover-2.jpg",
   "/cover-3.png",
-  "/points.PNG",
+  "/points.png",
   "/points-2.png",
   "/tns-2.jpg",
-  "/tns-4.PNG",
-  "/tns-5.PNG",
-  "/tns-6.PNG",
-  "/tns-7.PNG",
-  "/tns-8.PNG",
+  "/tns-4.png",
+  "/tns-5.png",
+  "/tns-6.png",
+  "/tns-7.png",
+  "/tns-8.png",
   "/tsu.png",
+  "/cover-4.jpg",
+  "/cover-5.png",
 ];
 
 const VIDEOS = [
