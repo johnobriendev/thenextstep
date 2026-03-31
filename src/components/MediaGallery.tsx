@@ -17,7 +17,7 @@ const PHOTOS = [
   "/tns-2.jpg",
   "/tns-4.PNG",
   "/tns-5.PNG",
-  "/tns-6.PNG",
+  "/tns-6-v2.PNG",
   "/tns-7.PNG",
   "/tns-8.PNG",
   "/tsu.png",
